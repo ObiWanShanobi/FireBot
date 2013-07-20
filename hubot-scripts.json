@@ -2,6 +2,7 @@
 "redis-brain.coffee",
 "karma.coffee",
 "wolfram.coffee",
+"wunderground.coffee",
 "jira.coffee",
 "time.coffee"
 ]
