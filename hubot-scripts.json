@@ -4,5 +4,6 @@
 "wolfram.coffee",
 "wunderground.coffee",
 "jira.coffee",
+"phpdoc.coffee",
 "time.coffee"
 ]

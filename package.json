@@ -24,7 +24,9 @@
     "hubot-scripts": ">= 2.4.2",
     "hubot-hipchat": "~2.5.1-4",
     "cleverbot-node": "0.1.1",
-    "wolfram": "~0.2.6"
+    "wolfram": "~0.2.6",
+    "jsdom": "~0.7.0",
+    "jquery": "~1.8.3"
   },
   "engines": {
     "node": ">= 0.8.x",
