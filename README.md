@@ -12,5 +12,6 @@ Coury](https://github.com/EvanDotPro) for CallFire and based on
 
 * Nodejs
 * Redis
+* libxml2-devel
 
 See [Hubot](http://hubot.github.com/) documentation for more information.
