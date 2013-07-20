@@ -1,5 +1,6 @@
 [
 "redis-brain.coffee",
 "karma.coffee",
-"wolfram.coffee"
+"wolfram.coffee",
+"time.coffee"
 ]
