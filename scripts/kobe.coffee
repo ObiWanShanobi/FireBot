@@ -38,6 +38,12 @@ kobe = [
     "I’m like Neo out this mother f***er."
     "Fear? Fear for what? Only thing I fear is bees. … I don’t f*** with bees, man. Other than that, I’m not afraid of nothing."
     "[Smush Parker is] the worst. He shouldn’t have been in the NBA but we were too cheap to pay for a point guard. So we let him walk on."
+    "I'm not fading into the shadows. I'm not going anywhere. We're not going anywhere... I'm not going for that s***."
+    "In the pressure situations. You can try to avoid contact, because you dont want to go to the FT line in those situations. Me, I enjoy it."
+    "If I go out there and miss game winners, and people say, 'Kobe choked,' or 'Kobe is seven for whatever in pressure situations.' Well, f*** you."
+    "I'll do whatever it takes to win games, whether it's sitting on a bench waving a towel, handing a cup of water to a teammate, or hitting the game-winning shot."
+    "The guy said NBA players are one in a million, ... I said, 'Man, look, I'm going to be that one in a million."
+    "Happy Leap Day! Enjoy it while it's here...because like a Kobe Bryant pass, it only occurs once every 4 years..."
 ]
 
 module.exports = (robot) ->

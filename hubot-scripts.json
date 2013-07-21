@@ -6,5 +6,7 @@
 "jira.coffee",
 "phpdoc.coffee",
 "git-help.coffee",
-"time.coffee"
+"time.coffee",
+"reload.coffee",
+"decide.coffee"
 ]
