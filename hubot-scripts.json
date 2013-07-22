@@ -8,5 +8,6 @@
 "git-help.coffee",
 "time.coffee",
 "reload.coffee",
+"announce.coffee",
 "decide.coffee"
 ]
