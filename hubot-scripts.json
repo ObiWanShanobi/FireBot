@@ -9,6 +9,5 @@
 "time.coffee",
 "reload.coffee",
 "announce.coffee",
-"gerrit.coffee",
 "decide.coffee"
 ]
