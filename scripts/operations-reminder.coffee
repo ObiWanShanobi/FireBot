@@ -10,7 +10,7 @@ module.exports = (robot) ->
 
   timeCheck 1000, ->
     thisHour = new Date().getHours()
-    if thisHour < 8 or thisHour > 15
+    if thisHour < 7 or thisHour > 16
         return
     if thisHour != hour
         hour = thisHour
