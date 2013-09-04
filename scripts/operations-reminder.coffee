@@ -6,16 +6,16 @@
 module.exports = (robot) ->
   allRooms = process.env.HUBOT_ANNOUNCE_ROOMS.split(',')
   timeCheck = (ms, func) -> setInterval func, ms
-  hour = new Date().getMinutes()
+  hour = new Date().getHours()
 
   timeCheck 1000, ->
-    thisHour = new Date().getMinutes()
-    #if thisHour < 7 or thisHour > 16
-    #    return
+    thisHour = new Date().getHours()
+    if thisHour < 7 or thisHour > 16
+        return
     if thisHour != hour
         hour = thisHour
         for room in allRooms
-            if /firebot/i.test(room)
+            if /operations/i.test(room)
                 robot.http('http://catfacts-api.appspot.com/api/facts?number=1')
                     .get() (error, response, body) ->
                         # passes back the complete reponse
