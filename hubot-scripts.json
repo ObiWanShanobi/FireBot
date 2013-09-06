@@ -9,5 +9,6 @@
 "time.coffee",
 "reload.coffee",
 "announce.coffee",
+"devexcuse.coffee",
 "decide.coffee"
 ]
