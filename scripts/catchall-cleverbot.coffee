@@ -18,6 +18,7 @@ module.exports = (robot) ->
   bot_sessions = {}
 
   robot.catchAll (msg) ->
+    console.log msg.message.text
     search = new RegExp("^@?" + msg.robot.name + "(.+)", "i")
     if msg.message.text and msg.message.text.match(search)
         sessionKey = if msg.message.room then msg.message.room else msg.message.user.name
