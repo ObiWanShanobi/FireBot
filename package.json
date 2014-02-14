@@ -30,7 +30,8 @@
     "cheerio": "~0.12.0",
     "chess": "0.1.5",
     "shorturl": "0.0.3",
-    "callfire": "0.0.x"
+    "callfire": "0.0.x",
+    "jayson": "~1.0.11"
   },
   "engines": {
     "node": ">= 0.8.x",
