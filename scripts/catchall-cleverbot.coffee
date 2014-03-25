@@ -18,7 +18,6 @@ module.exports = (robot) ->
   bot_sessions = {}
 
   robot.catchAll (msg) ->
-    console.log msg.message.text
     search = new RegExp("^@?" + msg.robot.name + "(.+)", "i")
     if msg.message.text and msg.message.text.match(search)
         sessionKey = if msg.message.room then msg.message.room else msg.message.user.name
@@ -27,9 +26,7 @@ module.exports = (robot) ->
         c = bot_sessions[sessionKey]
         replace = new RegExp("^(@?" + msg.robot.name + "[:,]?)", "i")
         data = msg.message.text.trim().replace(replace, '').trim()
-        console.log('« CLEVERBOT ('+sessionKey+'): ' + data)
         c.write(data, (c) =>
             response = c.message.replace /cleverbot/i, msg.robot.name
-            console.log('» CLEVERBOT ('+sessionKey+'): ' + response)
             msg.send(response)
         )
