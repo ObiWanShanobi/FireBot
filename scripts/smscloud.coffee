@@ -4,6 +4,7 @@
 # Commands:
 #   hubot smscloud queue - Display SMSCloud message queue size
 #   hubot smscloud our queue size - Look up the queue size for the configured API key
+#   hubot keep us updated on our smscloud queue size [every <n> minutes] - Display the queue size for the configured API key ever <n> minutes, defaulting to 30
 #   hubot smscloud our did queues - List all DID queues for the configured API key
 #   hubot smscloud culprit - Display the largest DID queue
 #   hubot smscloud send an sms to <toNumber> [from <fromNumber>] [with message <message>] - Sends an SMS to a given number, from a given number, with a given message (or "test")
@@ -31,6 +32,21 @@ module.exports = (robot) ->
       for did, queue of result.queues
         queueSize = queueSize + parseInt(queue.length)
       msg.send "Our queue is #{queueSize} messages right now"
+  
+  robot.respond /keep us updated on our smscloud queue size(?: every (\d+) minute(?:s)?)?/i, (msg) ->
+    if smscloudOurUpdateIntervalId
+      robot.intervals.remove smscloudOurUpdateIntervalId
+      smscloudOurUpdateIntervalId = null
+  
+    minuteInterval = 30
+    if msg.match[1]
+      minuteInterval = parseInt(msg.match[1])
+    intervalClosure = do (msg) ->
+      origMsg = new robot.Response(msg.robot, msg.message, msg.match)
+      return ->
+        smscloudQueue origMsg
+    smscloudOurUpdateIntervalId = robot.intervals.add intervalClosure, 1000 * 60 * minuteInterval
+    msg.send "Alright, I'll keep you updated"
   
   robot.respond /smscloud our did queues/i, (msg) ->
     smscloudKeyQueue msg, (result) ->
